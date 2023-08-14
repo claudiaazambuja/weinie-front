@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/RegisterPage.css';
+import '../../styles/RegisterPage.css';
 import { useNavigate } from 'react-router-dom';
-
-
 
 function RegisterPage() {
     const navigate = useNavigate()

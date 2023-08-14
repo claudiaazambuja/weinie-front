@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Importe o Axios
-import '../styles/LoginPage.css';
+import '../../styles/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 // const apiUrl = import.meta.env.VITE_API_URL
 
@@ -22,8 +22,9 @@ function LoginPage() {
                 email,
                 password,
             });
-            if (response.data.token) {
+            if (response.data.token && response.data.userID) {
                 localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user_id', response.data.userID);
                 alert('Login bem-sucedido!');
                 navigate('/dog');
             } else {

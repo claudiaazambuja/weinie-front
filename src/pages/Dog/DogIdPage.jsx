@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import '../styles/DogIdPage.css'; 
+import '../../styles/DogIdPage.css'; 
+import Header from '../../components/Header';
 
 function DogDetailPage() {
   const { id } = useParams();
@@ -31,7 +32,7 @@ function DogDetailPage() {
     try {
       // Lógica para alugar o doguinho
       // Exemplo: Enviar uma requisição para o backend para realizar o aluguel
-      alert(`Você alugou o doguinho ${dog.name} para fotos!`);
+      alert(`Parabéns. Estamos quase lá para o doguinho ${dog.name} seja seu! Em  instantes você receberá por email mais informações... Aguarde!`);
     } catch (error) {
       console.error('Erro ao alugar o doguinho:', error);
     }
@@ -44,6 +45,8 @@ function DogDetailPage() {
   }
 
   return (
+    <div>
+      <Header />
     <div className="container">
       <div className="dog-details">
         <h1>Detalhes do Doguito #{id}</h1>
@@ -56,6 +59,7 @@ function DogDetailPage() {
         </button>
         {/* ver como direcionar para o WhatsApp depois */}
       </div>
+    </div>
     </div>
   ); 
 }
