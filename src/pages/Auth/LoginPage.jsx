@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios'; // Importe o Axios
 import '../../styles/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
-// const apiUrl = import.meta.env.VITE_API_URL
+const VITE_API_URL = import.meta.env.VITE_API_URL
+
 
 
 function LoginPage() {
@@ -14,11 +15,10 @@ function LoginPage() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    //   const apiUrl = process.env.VITE_API_URL
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post(`http://localhost:5000/signin`, {
+            const response = await axios.post(`${VITE_API_URL}/signin`, {
                 email,
                 password,
             });

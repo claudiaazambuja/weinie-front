@@ -4,7 +4,6 @@ import { useNavigate, Link } from 'react-router-dom'
 import Header from '../../components/Header'
 import '../../styles/MyDogs.css'
 const VITE_API_URL = import.meta.env.VITE_API_URL
-  `${VITE_API_URL}/signin`
 
 function MyAnimalsPage() {
     const navigate = useNavigate()
