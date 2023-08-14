@@ -94,7 +94,7 @@ const NewDogForm = () => {
                 <label>Valor por Hora:</label>
                 <input type="number" name="hourly_rate" value={formData.hourly_rate} onChange={handleInputChange} />
 
-                <button type="submit">Adicionar Cachorro</button>
+                <button className="button" type="submit">Adicionar Cachorro</button>
             </form>
         </div>
     );

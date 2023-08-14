@@ -16,9 +16,11 @@
     border: 1px solid #d48308;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Altera a direção do flex para coluna */
+    flex-direction: column;
+    /* Altera a direção do flex para coluna */
     /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
     width: 500px;
 }
 
@@ -60,3 +62,21 @@
     color: #b87120;
     text-decoration: none;
 }
+
+
+.button {
+    background-color: #ff7b00;
+}
+
+.button:hover {
+    background-color: #dda200;
+}
+
+.danger-Zone{
+    background-color: #e41010;
+}
+
+.danger-Zone:hover {
+    background-color: #97d408;
+}
+

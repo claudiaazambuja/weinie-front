@@ -90,10 +90,10 @@ function MyAnimalsPage() {
                                 <p className="animal-status">Status: {animal.active}</p>
                             </div>
                         </div>
-                        <div className="animal-buttons">
-                            <button onClick={() => handleUpdateStatus(animal.id, 'ativo')}>Ativo</button>
-                            <button onClick={() => handleUpdateStatus(animal.id, 'inativo')}>Inativo</button>
-                            <button onClick={() => handleUpdateStatus(animal.id, 'de_ferias')}>De Férias</button>
+                        <div className="animal-buttons"  >
+                            <button className="button" onClick={() => handleUpdateStatus(animal.id, 'ativo')}>Ativo</button>
+                            <button className="button" onClick={() => handleUpdateStatus(animal.id, 'inativo')}>Inativo</button>
+                            <button className="button"onClick={() => handleUpdateStatus(animal.id, 'de_ferias')}>De Férias</button>
                             <button className="danger-Zone" onClick={() => handleDeleteAnimal(animal.id)}>Deletar</button>
                         </div>
                     </div>

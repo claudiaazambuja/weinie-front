@@ -8,29 +8,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  height: 100%; 
 }
 
 .logo {
-  width: 400px;
+  width: 200%; /* Define o tamanho do logo */
+  max-width: 1000px; /* Define um tamanho máximo para o logo */
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Aumenta a margem inferior para dar espaço ao botão */
 }
-.logo img {
-  max-width: 100%;
-  max-height: 100%;
-}
+
 .auth-button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #64532c;
+  background-color: #ff7b00;
   color: white;
   border: none;
   border-radius: 4px;
@@ -38,5 +38,5 @@ body {
 }
 
 .auth-button:hover {
-  background-color: #724f0d;
+  background-color: #dda200;
 }
