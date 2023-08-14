@@ -58,8 +58,8 @@ function RegisterPage() {
        } catch (error) {
         if (error.response) {
           const status = error.response.status;
-          if (status === 400) {
-            alert('Usuário já foi cadastrado. Faça login.');
+          if (status === 422 || status === 400) {
+            alert('Usuário já tem uma conta cadastrada. Faça login.');
           } else {
             alert('Ocorreu um erro na requisição. Por favor, tente novamente.');
           }

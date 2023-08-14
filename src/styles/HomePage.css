@@ -15,15 +15,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centraliza verticalmente */
-  height: 100%; 
+  justify-content: center;
+  /* Centraliza verticalmente */
+  height: 100%;
 }
 
 .logo {
-  width: 200%; /* Define o tamanho do logo */
-  max-width: 1000px; /* Define um tamanho máximo para o logo */
+  width: 200%;
+  /* Define o tamanho do logo */
+  max-width: 1000px;
+  /* Define um tamanho máximo para o logo */
   height: auto;
-  margin-bottom: 40px; /* Aumenta a margem inferior para dar espaço ao botão */
+  margin-bottom: 40px;
+  /* Aumenta a margem inferior para dar espaço ao botão */
 }
 
 .auth-button {
@@ -39,4 +43,41 @@ body {
 
 .auth-button:hover {
   background-color: #dda200;
+}
+
+
+@keyframes pawAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+}
+
+.paw {
+  animation: pawAnimation 3s infinite;
+}
+
+
+
+
+.paw-1 {
+  left: 10%;
+}
+
+
+.paw-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -2 /* Coloca as pegadas atrás dos outros elementos */
+}
+.paw-svg {
+  width: 150px;
+  /* Aumente o tamanho conforme necessário */
+  height: 150px;
 }

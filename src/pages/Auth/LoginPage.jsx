@@ -30,9 +30,15 @@ function LoginPage() {
                 alert('Credenciais inválidas.');
             }
         } catch (error) {
-            console.error('Erro na requisição:', error);
-        }
-    };
+            
+              const status = error.response.status;
+              if (status === 401) {
+                alert('Sem autorização. As credenciais inseridas divergem');
+              } else {
+                alert('Ocorreu um erro na requisição. Por favor, tente novamente.');
+              }}
+          
+         };
 
 
     return (
