@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
-import Header from '../../components/Header';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useNavigate, Link } from 'react-router-dom'
+import Header from '../../components/Header'
 import '../../styles/MyDogs.css'
+const VITE_API_URL = import.meta.env.VITE_API_URL
+  `${VITE_API_URL}/signin`
 
 function MyAnimalsPage() {
-    const navigate = useNavigate();
-    const [animals, setAnimals] = useState([]);
-    const token = localStorage.getItem('token');
+    const navigate = useNavigate()
+    const [animals, setAnimals] = useState([])
+    const token = localStorage.getItem('token')
     const id = localStorage.getItem('user_id')
-    console.log(id)
-    console.log(token)
 
     useEffect(() => {
         async function fetchMyDogs() {
             try {
                 if (!id) {
-                    navigate('/signin'); // Redirecione para a página de login se não houver token
+                    navigate('/signin')
                     return;
                 }
-                const response = await axios.get(`http://localhost:5000/me/${id}`, {
+                const response = await axios.get(`${VITE_API_URL}/me/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -37,7 +37,7 @@ function MyAnimalsPage() {
     const handleUpdateStatus = async (animalId, newStatus) => {
         try {
             await axios.put(
-                `http://localhost:5000/me/${animalId}`,
+                `${VITE_API_URL}/me/${animalId}`,
                 { active: newStatus },
                 {
                     headers: {
@@ -58,7 +58,7 @@ function MyAnimalsPage() {
 
     const handleDeleteAnimal = async (animalId) => {
         try {
-            await axios.delete(`http://localhost:5000/me/${animalId}`, {
+            await axios.delete(`${VITE_API_URL}/me/${animalId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -7,6 +7,7 @@ function HomePage() {
   const navigate = useNavigate()
 
   const handleLoginClick = () => {
+    localStorage.clear()
     navigate('/signin')
   };
   return (

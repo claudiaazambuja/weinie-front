@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../../styles/RegisterPage.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+const VITE_API_URL = import.meta.env.VITE_API_URL
 
 function RegisterPage() {
     const navigate = useNavigate()
@@ -39,7 +40,7 @@ function RegisterPage() {
           }
       try {
 
-        const response = await axios.post('http://localhost:5000/signup', {
+        const response = await axios.post(`${VITE_API_URL}/signup`, {
           name,
           cpf,
           phone,
@@ -50,7 +51,8 @@ function RegisterPage() {
         
         if (response.status === 201) {
             setIsSuccess(true); // Atualiza o estado para sucesso
-            alert('Usuário cadastrado com sucesso. Faça login.');
+            alert('Usuário cadastrado com sucesso. Faça login.')
+            navigate('/signin')
           }
       
        } catch (error) {

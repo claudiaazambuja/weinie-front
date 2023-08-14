@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../styles/DoguitosPage.css';
 import DogDetails from '../../components/DogDetails';
-import Header from '../../components/Header';
+import Header from '../../components/Header'
+const VITE_API_URL = import.meta.env.VITE_API_URL
 
 function DoguitosPage() {
   const [dogList, setDogList] = useState([]);
@@ -11,7 +12,7 @@ function DoguitosPage() {
   useEffect(() => {
     async function fetchDogList() {
       try {
-        const response = await axios.get('http://localhost:5000/dog');
+        const response = await axios.get(`${VITE_API_URL}/dog`);
         setDogList(response.data);
       } catch (error) {
         console.error('Erro na requisição:', error);

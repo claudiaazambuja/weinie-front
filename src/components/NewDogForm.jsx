@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import joi from 'joi';
-import '../styles/NewDogForm.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import axios from 'axios'
+import joi from 'joi'
+import '../styles/NewDogForm.css'
+import { useNavigate } from 'react-router-dom'
+const VITE_API_URL = import.meta.env.VITE_API_URL
 
 const dogSchema = joi.object({
     name: joi.string().required(),
@@ -42,20 +43,20 @@ const NewDogForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-    const validation = dogSchema.validate(formData);
-      if (validation.error) {
-      setError(validation.error.details[0].message);
-      return;
+        const validation = dogSchema.validate(formData);
+        if (validation.error) {
+            setError(validation.error.details[0].message);
+            return;
         }
 
-    const token = localStorage.getItem('token'); // Obtenha o token do local storage
-    if (!token) {
-        console.log('Token not found in LocalStorage');
-        return;
-      }
+        const token = localStorage.getItem('token')
+        if (!token) {
+            console.log('Token not found in LocalStorage');
+            return;
+        }
 
         try {
-            await axios.post('http://localhost:5000/me/newdog', formData, {
+            await axios.post(`${VITE_API_URL}/me/newdog`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -69,7 +70,6 @@ const NewDogForm = () => {
 
     return (
         <div>
-            <h2>Adicionar Novo Cachorro</h2>
             {error && <p className="error-message">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <label>Nome:</label>
