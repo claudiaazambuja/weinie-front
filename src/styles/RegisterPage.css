@@ -1,63 +1,64 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200vh;
-  }
-  
-  .login-box {
-    align-items: center;
-    background-color:  #724f0d;
-    border: 1px solid #ccc;
-    padding: 40px; /* Aumente o padding para espaçar mais o conteúdo */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    margin-bottom: 30px; /* Aumente a margem inferior para mais espaço */
-  }
-  
-  .input-group {
-    margin-bottom: 20px; /* Aumente a margem inferior para mais espaço */
-  }
-  
-  .input-group input {
-    width: 100%; /* Use 100% para ocupar a largura do pai */
-    padding: 15px; /* Aumente o padding para espaçar mais o campo */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 18px; /* Aumente o tamanho da fonte */
-  }
-  .button {
-    padding: 15px 15px;
-    background-color: #ff7b00;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #dda200;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px; 
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200vh;
+}
+
+.login-box {
+  align-items: center;
+  background-color: #724f0d;
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.button {
+  padding: 15px 15px;
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #dda200;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
 
 .form-group input,
 .form-group button {
-  margin-bottom: 15px; /* Adicione margem inferior para espaçamento entre os elementos */
-  width: 95%; /* Reduza a largura um pouco para melhor espaçamento */
+  margin-bottom: 15px;
+  width: 95%;
 }
 
 .form-group button {
-  padding: 20px 30px; /* Aumente o padding do botão para mais destaque */
-  font-size: 20px; /* Aumente o tamanho da fonte do botão */
+  padding: 20px 30px;
+  font-size: 20px;
 }
