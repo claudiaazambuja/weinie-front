@@ -1,26 +1,17 @@
-/* body {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    min-height: 100vh; 
-    margin: 0; 
-} */
-
-.animal-cards-container {
+/* .animal-cards-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
+} */
 
 .animal-card {
     border: 1px solid #d48308;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* Altera a direção do flex para coluna */
-    /* Centraliza verticalmente */
+
     align-items: center;
-    /* Centraliza horizontalmente */
+
     width: 500px;
 }
 
@@ -55,6 +46,7 @@
 .title {
     font-size: 24px;
     margin-bottom: 10px;
+    margin-top: 250px;
 }
 
 .add-animal-link {

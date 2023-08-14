@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios'; // Importe o Axios
 import '../../styles/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
-const VITE_API_URL = import.meta.env.VITE_API_URL
-
-
 
 function LoginPage() {
     const navigate = useNavigate()
@@ -13,8 +10,10 @@ function LoginPage() {
         navigate('/signup')
     };
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const VITE_API_URL = import.meta.env.VITE_API_URL
 
     const handleLogin = async () => {
         try {

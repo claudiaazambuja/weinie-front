@@ -18,7 +18,7 @@ function MyAnimalsPage() {
                     navigate('/signin')
                     return;
                 }
-                const response = await axios.get(`${VITE_API_URL}/me/${id}`, {
+                const response = await axios.get(`${VITE_API_URL}/me/`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -77,7 +77,7 @@ function MyAnimalsPage() {
             <div className="title-and-link">
                 <h1 className="title">Meus xashichas</h1>
                 <Link className="add-animal-link" to="/me/newdog">
-                    Adicionar novo salsicha
+                    Adicionar novo salsicha? Clique aqui
                 </Link>
             </div>
             <div className="animal-cards-container">

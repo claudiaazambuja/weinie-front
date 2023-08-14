@@ -46,13 +46,15 @@ function DogDetailPage() {
   return (
     <div>
       <Header />
-      <div className="container">
-        <div className="dog-details">
+      <div className="container-details">
+        <div className="dog-all-details">
           <h1>Detalhes do Doguito #{id}</h1>
           <h2>{dog.name}</h2>
-          <img src={dog.photo_url} alt={dog.name} />
+          <img className="dog-image-id " src={dog.photo_url} alt={dog.name} />
           <p>Características: {dog.characteristics}</p>
           <p>Valor por hora: R${dog.hourly_rate}</p>
+          <p>Ainda não tem certeza que é esse? </p>
+          <p> Entre em contato direto com o dono: {dog.contact_info}</p>
           <button className="button" onClick={handleRentClick}>
             Marcar horário? Clique aqui e fale agora com o tutor
           </button>

@@ -7,9 +7,11 @@ function DogDetails({ dog }) {
       <h2>{dog.name}</h2>
       <img className="dog-image" src={dog.photo_url} alt={dog.name} />
       <p>Características: {dog.characteristics}</p>
-      <Link to={`/dog/${dog.id}`} className="button">
-        Saiba mais
-      </Link>
+     
+        <Link to={`/dog/${dog.id}`} className="button">
+          Saiba mais
+        </Link>
+      
     </div>
   );
 }
