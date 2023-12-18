@@ -20,7 +20,6 @@ function DogDetailPage() {
       try {
         const response = await axios.get(`${VITE_API_URL}/dog/${id}`);
         setDog(response.data.rows[0]);
-        console.log(response)
       } catch (error) {
         console.error('Erro na requisição:', error);
       }

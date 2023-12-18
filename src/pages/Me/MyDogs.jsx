@@ -23,7 +23,6 @@ function MyAnimalsPage() {
                         Authorization: `Bearer ${token}`,
                     },
                 });
-                console.log('Dados recebidos da API:', response.data);
                 setAnimals(response.data.rows);
             } catch (error) {
                 console.error('Erro na requisição:', error);
@@ -93,7 +92,7 @@ function MyAnimalsPage() {
                         <div className="animal-buttons"  >
                             <button className="button" onClick={() => handleUpdateStatus(animal.id, 'ativo')}>Ativo</button>
                             <button className="button" onClick={() => handleUpdateStatus(animal.id, 'inativo')}>Inativo</button>
-                            <button className="button"onClick={() => handleUpdateStatus(animal.id, 'de_ferias')}>De Férias</button>
+                            <button className="button" onClick={() => handleUpdateStatus(animal.id, 'de_ferias')}>De Férias</button>
                             <button className="danger-Zone" onClick={() => handleDeleteAnimal(animal.id)}>Deletar</button>
                         </div>
                     </div>

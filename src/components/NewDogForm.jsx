@@ -51,7 +51,6 @@ const NewDogForm = () => {
 
         const token = localStorage.getItem('token')
         if (!token) {
-            console.log('Token not found in LocalStorage');
             return;
         }
 
